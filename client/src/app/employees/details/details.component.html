@@ -1,0 +1,28 @@
+<div class="add-form" *ngIf="employeeDetails">
+  <div class="my-1 px-2">Add Employee</div>
+  <form [formGroup]="updateEmployeeForm" (ngSubmit)="updateEmployee()">
+    <div class="flex">
+      <div class="px-2">
+        <mat-form-field class="example-full-width" appearance="standard">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Enter First Name" formControlName="first_name">
+        </mat-form-field>
+      </div>
+      <div class="px-2">
+        <mat-form-field class="example-full-width" appearance="standard">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Enter Last Name" formControlName="last_name">
+        </mat-form-field>
+      </div>
+      <div class="px-2">
+        <mat-form-field class="example-full-width" appearance="standard">
+          <mat-label>Age</mat-label>
+          <input matInput placeholder="Enter Age" type="number" formControlName="age">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="text-right">
+      <button mat-button color="primary" type="submit">Update</button>
+    </div>
+  </form>
+</div>
